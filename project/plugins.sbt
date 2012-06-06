@@ -1,3 +1,3 @@
 libraryDependencies <+= (sbtVersion){ 
-  "org.scala-tools.sbt" %% "scripted-plugin" % _
+  "org.scala-sbt" %% "scripted-plugin" % _
 }
