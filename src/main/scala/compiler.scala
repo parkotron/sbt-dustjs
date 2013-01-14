@@ -28,7 +28,7 @@ case class Compiler() {
   def compile(template: String, registerAs: String): Either[String, String] = withContext { ctx =>
     val scope = ctx.initStandardObjects()
     ctx.evaluateReader(scope,
-      new InputStreamReader(getClass.getResourceAsStream("/dust.js"), utf8), "dust.js", 1, null)
+      new InputStreamReader(getClass.getResourceAsStream("/dust-full-1.0.0.js"), utf8), "dust-full-1.0.0.js", 1, null)
 
     val prototype = scope.get("dust", scope).asInstanceOf[NativeObject]
     val compileFunc = prototype.get("compile", scope).asInstanceOf[Function]

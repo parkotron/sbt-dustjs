@@ -4,20 +4,11 @@ name := "sbt-dustjs"
 
 organization := "eu.getintheloop"
 
-version := "0.0.4-SNAPSHOT"
+version := "0.0.6-SNAPSHOT"
 
 libraryDependencies += "rhino" % "js" % "1.7R2"
 
 scalacOptions += "-deprecation"
-
-// publishing
-publishTo := Some(Resolver.url("sbt-plugin-releases", 
-  new URL("http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/")
-    )(Resolver.ivyStylePatterns))
-
-publishMavenStyle := false
-
-credentials += Credentials(Path.userHome / ".ivy2" / ".credentials.typesafe")
 
 publishArtifact in (Compile, packageBin) := true
 
